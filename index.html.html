@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charest="UTF-8">
+        <meta charset="viewport"
+        Content="width=device-width,
+        initial-scale=1.0">
+        <title>Elegant Mehendi</title>
+        <style>
+            /*Global Style*/
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial',
+        sans-serif;
+            }
+            body{
+                color: #333;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            /*Header*/
+            header{
+                background: #6b3e1d; /* deep
+                mehendi color*/
+                padding: 20px 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            header h1{
+                color: #fff;
+                font-family: 'Georgia', serif;
+                font-size: 28px;
+            }
+            nav a{
+                margin-left: 30px;
+                color:#fff;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+            nav a:hover{
+                color: #fdd835;
+            }
+            /*Hero Section*/
+            .hero{
+                background:url('https: //Images .mehendi .com/photos/ 1248905/pexelsjfif')
+                center/cover no-repeat;
+                heiight: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                position: relative;
+            }
+            .hero::after{
+                content: "";
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%; height: 100%;
+                background-color: rgba(0,0,0,0.5);
+            }
+            .hero-content img {
+                position: 180px;
+                height: 180;
+                border-radius: 50%;
+                border: 4px solid #fdd835;
+                margin-bottom: 20px;
+            }
+            .hero-content h2{
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+            .hero-content p{
+                font-size:20px;
+                margin-bottom: 20px;
+            }
+            .hero-content a{
+                background-color: #fdd835;
+                color: #6b3e1d;
+                padding: 12px 30px;
+                border-radius: 30px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+            .hero-content a:hover{
+                background-color: #fff;
+            }
+            /*Section*/
+            section{
+                padding: 80px 50px;
+            }
+            section h2{
+                text-align: center;
+                font-size: 32px;
+                margin-bottom: 50px;
+                color: #6b3e1d;
+            }
+            /*About*/
+            .about{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            .about img{
+                width:300px;
+                border-radius: 10px;
+            }
+            .about-text{
+                flex: 1;
+                font-size: 18px;
+                line-height: 1.6;
+            }
+            /*Services*/
+            .services {
+                display:grid;
+                grid-template-colums: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
+            }
+            .service-card {
+                background: #fff3e0;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+                transition: 0.3s;
+            }
+            .service-card:hover{
+                transform: scale(1.05);
+                box-shadow: 0 10px 20px
+                rgba(0,0,0,0.2);
+            }
+            .service-card img{
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+            .service-card h3{
+                color: #6b3e1d;
+                margin-bottom: 10px;
+            }
+            /*Gallery*/
+            .gallery{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+                gap: 20px;
+            }
+            .gallery img{
+                width: 100px;
+                border-radius: 10px;
+                transition: 0.3s;
+            }
+            .gallery img:hover{
+                transform: scale(1.05);
+            }
+            /*Testimonials*/
+            .testimonials{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                max-width: 800px;
+                margin: auto;
+            }
+            .testimonial{
+                background-color: #fff3e0;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
+            }
+            .testimonial p{
+                font-style: italic;
+                margin-bottom: 10px;
+            }
+            .testimonial h4{
+                font-weight: bold;
+                color: #6b3e1d;
+            }
+            /*Contact*/
+            .contact form{
+                max-width: 600px;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .contact input, .contact textarea{
+                padding: 12px;
+                border-radius: 8px;
+                border: 1px solid #ccc;
+                font-size: 16px;
+                width: 100px;
+            }
+            .contact button{
+                background-color: #6b3e1d;
+                color: #fff;
+                padding: 12px;
+                border-radius: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            .contact button:hover{
+                background-color: #fdd835;
+                color: #6b3e1d;
+            }
+            /*Footer*/
+            footer{
+                background: #6b3e1d;
+                color: #fff;
+                text-align: center;
+                padding: 30px 50px;
+            }
+            footer a{
+                color: #fdd835;
+                margin: 0 10px;
+            }
+            /*Responsive*/
+            @media(max-width:786px){}
+                .about {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                header{
+                    flex-direction: column;
+                }
+                nav{
+                    margin-top: 10px;
+                }
+        </style>
+    </head>
+<body>
+      <!--Header-->
+      <header>
+        <h1>Elegant Mehendi</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <!--Hero Section-->
+      <section class="hero">
+        <div class="hero-contact">
+            <img src="Images/mehendi.jfif" alt="Mehendi Art">
+            <h2>Mehendi Art</h2>
+            <p>Creating Memories With Beautiful Mehendi Designs</p>
+            <a href="#contact">Book Now</a>
+        </div>
+      </section>
+      <!--About Section-->
+      <section id="about">
+        <h2>About Me</h2>
+        <div class="about">
+     <img src="Images/owner.jpeg"alt="Owner Photo">
+     <div class="about-text">
+        <p>Hello! I'm Hifza, a professional Mehendi artist with
+            over 5 years of experience in creating exquisite 
+            bridal and party mehendi designs. my passion is turning every 
+            event into a memorable celebration with unique and elegant designs.
+        </p>
+     </div>
+        </div>
+      </section>
+      <!--Services Section-->
+      <section id="services">
+        <h2>Services</h2>
+        <div class="services-card">
+            <img src="Images/Bridal 2.jfif"alt="Bridal Mehendi">
+            <h3>BridaL Mehendi</h3>
+            <p>Elegant design for your special day. packages start at $500.</p>
+        </div>
+        <div class="services-card">
+            <img src="Images/party.jfif"alt="Party Mehendi">
+            <h3>Party Mehendi</h3>
+            <p>Fun and stylish designs for all your celedration. packages start at $400.</p>
+        </div>
+        <div class="Services-card">
+            <img src="Images/kids.jfif"alt="Kids Mehendi">
+            <h3>Kids Mehendi</h3>
+            <p>Simple and playful mehendi for children. packages start at $250</p>
+        </div>
+      </section>
+      <!--Gallery Section-->
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="Images/1.jfif"alt="Gallery Image">
+            <img src="Images/2.jfif"alt="Gallery Image">
+            <img src="Images/3.jfif"alt="Gallery Image">
+            <img src="Images/4.jfif"alt="Gallery Image">
+            <img src="Images/5.jfif"alt="Gallery Image">
+            <img src="Images/6.jfif"alt="Gallery Image">
+            <img src="Images/7.jfif"alt='Gallery Image'>
+            <img src="Images/8.jfif"alt="Galler Image">
+            <img src="Images/9.jfif"alt="Gallery Image">
+            <img src="Images/10.jfif"alt="Gallery Image">
+            <img src="Images/bridal.webp"alt="Gallery Image">
+            <img src="Images/party.jfif"alt="Gallery Image">
+                </div>
+      </section>
+      <!-- Testimonials Section -->
+       <section id="testimonials">
+        <hh2>Testimonials</hh2>
+        <div class="testimonials">
+            <p>"Hifza did an amazing job on my bridal mehendi! Everyone loved it!"</p>
+            <h4>Ayesha</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Her party designs are fun and unique. Highly recommended!"</p>
+            <h4>sans</h4>
+        </div>
+       </section>
+       <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact">
+                <from><input type="text"placeholder="Your Name" required>
+                    <input type="email"placeholder="YourEmail" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                                </from>
+            </div>
+        </section>
+        <!-- Fotter -->
+         <footer>
+            <p>Follow me on
+            <a href="#">Instagram</a> |
+            <a href="#">Facebook</a>  |
+            <a href="#">TiKtok</a>
+            </p>
+            <p>&copy; 2026 Elagant Mehendi. All rights reserved.</p>
+         </footer>
+    </body>
+</html>
